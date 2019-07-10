@@ -11,7 +11,6 @@ using NAudio.Wave;
 using NAudio.CoreAudioApi;
 
 
-
 namespace WindowsFormsApp3
 {
     public partial class Launchpad : Form
@@ -31,13 +30,10 @@ namespace WindowsFormsApp3
         }
 
         
-
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
         }
-
 
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -206,10 +202,6 @@ namespace WindowsFormsApp3
 
 
 
-
-
-
-
             if (e.KeyCode.ToString() == "f" || e.KeyCode.ToString() == "F")
             {
                 fButton.Image = Properties.Resources.right_up_white;
@@ -229,10 +221,7 @@ namespace WindowsFormsApp3
             {
                 vButton.Image = Properties.Resources.right_down_white;
             }
-
-
         }
-
 
         private void PlaySound(string file)
         {

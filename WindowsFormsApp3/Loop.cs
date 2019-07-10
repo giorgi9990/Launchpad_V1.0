@@ -20,7 +20,6 @@ namespace WindowsFormsApp3
         private int indexToPaint;
         private Timer timer = new Timer();
 
-
         public Loop()
         {
             InitializeComponent();
