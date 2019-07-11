@@ -606,8 +606,8 @@
             this.Name = "Launchpad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Launchpad_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Launchpad_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseUp);

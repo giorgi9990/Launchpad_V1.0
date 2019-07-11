@@ -58,7 +58,6 @@
             this.fourthloopTimer = new System.Windows.Forms.Timer(this.components);
             this.fifthloopTimer = new System.Windows.Forms.Timer(this.components);
             this.sixthloopTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loopGif6)).BeginInit();
@@ -369,15 +368,6 @@
             this.sixthloopTimer.Tag = "6";
             this.sixthloopTimer.Tick += new System.EventHandler(this.SixthloopTimer_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(304, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 120;
-            this.label1.Text = "label1";
-            // 
             // Loop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,7 +376,6 @@
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.LoopBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(429, 819);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.loopGif5LabelMinus);
             this.Controls.Add(this.loopGif5LabelPlus);
             this.Controls.Add(this.loopGif5Label);
@@ -462,6 +451,5 @@
         private System.Windows.Forms.Timer fourthloopTimer;
         private System.Windows.Forms.Timer fifthloopTimer;
         private System.Windows.Forms.Timer sixthloopTimer;
-        private System.Windows.Forms.Label label1;
     }
 }
