@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3.Services
+namespace WindowsFormsApp3
 {
    public interface IAudioService
     {
         void PlaySound(string file);
-        void RecordSound(string name, Timer timer);
-        void StopRecordSoundO(Timer timer);
+        void RecordSounds(Timer timer, string name);
+        void StopRecordSound(Timer timer);
         void SetTimeInterval(Timer timer, int interval);
     }
 }

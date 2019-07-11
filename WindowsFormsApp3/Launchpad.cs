@@ -19,17 +19,18 @@ namespace WindowsFormsApp3
         AudioFileReader audioFileReader;
         private bool mouseDown;
         private Point lastLocation;
+        public IAudioService AudioService { get; }
 
 
-        public Launchpad()
+        public Launchpad(IAudioService audioService)
         {
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.TransparencyKey = Color.FromKnownColor(KnownColor.InactiveBorder);
-           
             InitializeComponent();
+            AudioService = audioService;
         }
 
-        
+
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -244,7 +245,7 @@ namespace WindowsFormsApp3
         private void pictureBox42_Click(object sender, EventArgs e)
         {
             this.Location = new Point(this.Location.X - 200, this.Location.Y);
-            Loop loop = new Loop();
+            Loop loop = new Loop(new AudioService());
             loop.Show();
             loop.Location = new Point(this.Location.X + 810, this.Location.Y);
         }
