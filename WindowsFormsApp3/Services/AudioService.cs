@@ -2,34 +2,32 @@
 using NAudio.Wave;
 using System;
 using System.Windows.Forms;
-
+using System.Media;
 namespace WindowsFormsApp3
 {
     public class AudioService : IAudioService
     {
-        private WasapiOut wasapiOut;
-        private AudioFileReader audioFileReader;
+        private WaveFileReader WaveFileReader;
+        private DirectSoundOut DirectSoundOut;
+
+        public void PlaySound(string file)
+        {
+            WaveFileReader = new WaveFileReader(file);
+            DirectSoundOut = new DirectSoundOut();
+            DirectSoundOut.Init(new WaveChannel32(WaveFileReader));
+            DirectSoundOut.Play();
+        }
+
         private WaveIn waveSource;
         private WaveFileWriter waveFile;
         public int firstrecordDuration { get; set; } = 8000;
         private Timer RecordTimer;
-        public void PlaySound(string file)
-        {
-            
-            AudioClientShareMode shareMode = AudioClientShareMode.Shared;
-            wasapiOut = new WasapiOut(shareMode, 0);
-            wasapiOut.Volume = 0.5f;
-            audioFileReader = new AudioFileReader(file);
-            audioFileReader.Volume = 0.5f;
-            wasapiOut.Init(audioFileReader);
-            wasapiOut.Play();
-        }
 
-        public void RecordSounds(Timer timer, string name)
+        public void RecordSounds(Timer timer, string name, int number)
         {
             RecordTimer = new Timer();
             RecordTimer.Interval = firstrecordDuration;
-            SetTimeInterval(timer, 1);
+            SetTimeInterval(timer, number);
             RecordTimer.Tick += delegate (object sender2, EventArgs e2)
             {
                 RecordSoundDelegat(new object(), new EventArgs(), timer);
@@ -63,6 +61,7 @@ namespace WindowsFormsApp3
 
             timer.Start();
         }
+        #region Private Function
         private void waveSource_RecordingStopped(object sender, StoppedEventArgs e)
         {
             if (waveSource != null)
@@ -70,14 +69,12 @@ namespace WindowsFormsApp3
                 waveSource.Dispose();
                 waveSource = null;
             }
-
             if (waveFile != null)
             {
                 waveFile.Dispose();
                 waveFile = null;
             }
         }
-
         private void waveSource_DataAvailable(object sender, WaveInEventArgs e)
         {
             if (waveFile != null)
@@ -88,9 +85,10 @@ namespace WindowsFormsApp3
         }
         private void RecordSoundDelegat(object sender, EventArgs e, Timer timer)
         {
-                StopRecordSound(timer);
-           
+            StopRecordSound(timer);
+
             RecordTimer.Stop();
-        }
+        } 
+        #endregion
     }
 }

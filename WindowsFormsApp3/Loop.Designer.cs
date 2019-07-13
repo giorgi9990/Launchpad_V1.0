@@ -58,7 +58,6 @@
             this.fourthloopTimer = new System.Windows.Forms.Timer(this.components);
             this.fifthloopTimer = new System.Windows.Forms.Timer(this.components);
             this.sixthloopTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loopGif6)).BeginInit();
@@ -101,7 +100,9 @@
             this.loopGif5LabelMinus.Name = "loopGif5LabelMinus";
             this.loopGif5LabelMinus.Size = new System.Drawing.Size(19, 25);
             this.loopGif5LabelMinus.TabIndex = 119;
+            this.loopGif5LabelMinus.Tag = "loopGif5Label";
             this.loopGif5LabelMinus.Text = "-";
+            this.loopGif5LabelMinus.Click += new System.EventHandler(this.MinusLabel);
             // 
             // loopGif5LabelPlus
             // 
@@ -113,7 +114,9 @@
             this.loopGif5LabelPlus.Name = "loopGif5LabelPlus";
             this.loopGif5LabelPlus.Size = new System.Drawing.Size(24, 25);
             this.loopGif5LabelPlus.TabIndex = 118;
+            this.loopGif5LabelPlus.Tag = "loopGif5Label";
             this.loopGif5LabelPlus.Text = "+";
+            this.loopGif5LabelPlus.Click += new System.EventHandler(this.PlusLabel);
             // 
             // loopGif5Label
             // 
@@ -137,7 +140,9 @@
             this.loopGif6LabelMinus.Name = "loopGif6LabelMinus";
             this.loopGif6LabelMinus.Size = new System.Drawing.Size(19, 25);
             this.loopGif6LabelMinus.TabIndex = 116;
+            this.loopGif6LabelMinus.Tag = "loopGif6Label";
             this.loopGif6LabelMinus.Text = "-";
+            this.loopGif6LabelMinus.Click += new System.EventHandler(this.MinusLabel);
             // 
             // loopGif6LabelPlus
             // 
@@ -149,7 +154,9 @@
             this.loopGif6LabelPlus.Name = "loopGif6LabelPlus";
             this.loopGif6LabelPlus.Size = new System.Drawing.Size(24, 25);
             this.loopGif6LabelPlus.TabIndex = 115;
+            this.loopGif6LabelPlus.Tag = "loopGif6Label";
             this.loopGif6LabelPlus.Text = "+";
+            this.loopGif6LabelPlus.Click += new System.EventHandler(this.PlusLabel);
             // 
             // loopGif6Label
             // 
@@ -173,7 +180,9 @@
             this.loopGif3LabelMinus.Name = "loopGif3LabelMinus";
             this.loopGif3LabelMinus.Size = new System.Drawing.Size(19, 25);
             this.loopGif3LabelMinus.TabIndex = 113;
+            this.loopGif3LabelMinus.Tag = "loopGif3Label";
             this.loopGif3LabelMinus.Text = "-";
+            this.loopGif3LabelMinus.Click += new System.EventHandler(this.MinusLabel);
             // 
             // loopGif3LabelPlus
             // 
@@ -185,7 +194,9 @@
             this.loopGif3LabelPlus.Name = "loopGif3LabelPlus";
             this.loopGif3LabelPlus.Size = new System.Drawing.Size(24, 25);
             this.loopGif3LabelPlus.TabIndex = 112;
+            this.loopGif3LabelPlus.Tag = "loopGif3Label";
             this.loopGif3LabelPlus.Text = "+";
+            this.loopGif3LabelPlus.Click += new System.EventHandler(this.PlusLabel);
             // 
             // loopGif3Label
             // 
@@ -209,7 +220,9 @@
             this.loopGif4LabelMinus.Name = "loopGif4LabelMinus";
             this.loopGif4LabelMinus.Size = new System.Drawing.Size(19, 25);
             this.loopGif4LabelMinus.TabIndex = 110;
+            this.loopGif4LabelMinus.Tag = "loopGif4Label";
             this.loopGif4LabelMinus.Text = "-";
+            this.loopGif4LabelMinus.Click += new System.EventHandler(this.MinusLabel);
             // 
             // loopGif4LabelPlus
             // 
@@ -221,7 +234,9 @@
             this.loopGif4LabelPlus.Name = "loopGif4LabelPlus";
             this.loopGif4LabelPlus.Size = new System.Drawing.Size(24, 25);
             this.loopGif4LabelPlus.TabIndex = 109;
+            this.loopGif4LabelPlus.Tag = "loopGif4Label";
             this.loopGif4LabelPlus.Text = "+";
+            this.loopGif4LabelPlus.Click += new System.EventHandler(this.PlusLabel);
             // 
             // loopGif4Label
             // 
@@ -245,7 +260,9 @@
             this.loopGif2LabelMinus.Name = "loopGif2LabelMinus";
             this.loopGif2LabelMinus.Size = new System.Drawing.Size(19, 25);
             this.loopGif2LabelMinus.TabIndex = 107;
+            this.loopGif2LabelMinus.Tag = "loopGif2Label";
             this.loopGif2LabelMinus.Text = "-";
+            this.loopGif2LabelMinus.Click += new System.EventHandler(this.MinusLabel);
             // 
             // loopGif2LabelPlus
             // 
@@ -257,7 +274,9 @@
             this.loopGif2LabelPlus.Name = "loopGif2LabelPlus";
             this.loopGif2LabelPlus.Size = new System.Drawing.Size(24, 25);
             this.loopGif2LabelPlus.TabIndex = 106;
+            this.loopGif2LabelPlus.Tag = "loopGif2Label";
             this.loopGif2LabelPlus.Text = "+";
+            this.loopGif2LabelPlus.Click += new System.EventHandler(this.PlusLabel);
             // 
             // loopGif2Label
             // 
@@ -369,15 +388,6 @@
             this.sixthloopTimer.Tag = "6";
             this.sixthloopTimer.Tick += new System.EventHandler(this.SixthloopTimer_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(304, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 120;
-            this.label1.Text = "label1";
-            // 
             // Loop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,7 +396,6 @@
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.LoopBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(429, 819);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.loopGif5LabelMinus);
             this.Controls.Add(this.loopGif5LabelPlus);
             this.Controls.Add(this.loopGif5Label);
@@ -462,6 +471,5 @@
         private System.Windows.Forms.Timer fourthloopTimer;
         private System.Windows.Forms.Timer fifthloopTimer;
         private System.Windows.Forms.Timer sixthloopTimer;
-        private System.Windows.Forms.Label label1;
     }
 }

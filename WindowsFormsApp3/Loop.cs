@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Imaging;
-using System.Data;
+
+
 namespace WindowsFormsApp3
 {
     public partial class Loop : Form
@@ -66,7 +61,7 @@ namespace WindowsFormsApp3
             {
                 loopGif1.Enabled = true;
 
-                AudioService.RecordSounds(firstloopTimer,"RecordSound/Track1.wav");
+                AudioService.RecordSounds(firstloopTimer,"RecordSound/Track1.wav",1);
                 secondclick = true;
             }
             else
@@ -80,19 +75,19 @@ namespace WindowsFormsApp3
             switch ((sender as PictureBox).Name)
             {
                 case "loopGif2":
-                    AudioService.RecordSounds(secondloopTimer, "RecordSound/Track2.wav");
+                    AudioService.RecordSounds(secondloopTimer, "RecordSound/Track2.wav", int.Parse(loopGif2Label.Text));
                     break;
                 case "loopGif3":
-                    AudioService.RecordSounds(thirdloopTimer, "RecordSound/Track3.wav");
+                    AudioService.RecordSounds(thirdloopTimer, "RecordSound/Track3.wav", int.Parse(loopGif3Label.Text));
                     break;
                 case "loopGif4":
-                    AudioService.RecordSounds(fourthloopTimer, "RecordSound/Track4.wav");
+                    AudioService.RecordSounds(fourthloopTimer, "RecordSound/Track4.wav", int.Parse(loopGif4Label.Text));
                     break;
                 case "loopGif5":
-                    AudioService.RecordSounds(fifthloopTimer, "RecordSound/Track5.wav");
+                    AudioService.RecordSounds(fifthloopTimer, "RecordSound/Track5.wav", int.Parse(loopGif5Label.Text));
                     break;
                 case "loopGif6":
-                    AudioService.RecordSounds(sixthloopTimer, "RecordSound/Track6.wav");
+                    AudioService.RecordSounds(sixthloopTimer, "RecordSound/Track6.wav", int.Parse(loopGif6Label.Text));
                     break;
                 default:
                     break;
@@ -102,8 +97,9 @@ namespace WindowsFormsApp3
         #region Timer_Tick
         private void FirstloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track1.wav");
+          AudioService.PlaySound("RecordSound/untitled.wav");
         }
+      
         private void SecondloopTimer_Tick(object sender, EventArgs e)
         {
             AudioService.PlaySound("RecordSound/Track2.wav");
@@ -131,14 +127,28 @@ namespace WindowsFormsApp3
 
 
 
-
-
-
-
-
-
         #endregion
 
+        private void MinusLabel(object sender, EventArgs e)
+        {
+            Label LctionLabel = (sender as Label);
+            Label LoopLabel = (Label)this.Controls[LctionLabel.Tag.ToString()];
+
+            if (int.Parse(LoopLabel.Text) > 1)
+            {
+                LoopLabel.Text = (int.Parse(LoopLabel.Text) - 1).ToString();
+            }
+        }
        
+        private void PlusLabel(object sender, EventArgs e)
+        {
+            Label LctionLabel = (sender as Label);
+            Label LoopLabel = (Label)this.Controls[LctionLabel.Tag.ToString()];
+
+            if (int.Parse(LoopLabel.Text) <4 )
+            {
+                LoopLabel.Text = (int.Parse(LoopLabel.Text) + 1).ToString();
+            }
+        }
     }
 }

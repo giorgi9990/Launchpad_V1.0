@@ -15,12 +15,10 @@ namespace WindowsFormsApp3
 {
     public partial class Launchpad : Form
     {
-        WasapiOut wasapiOut;
-        AudioFileReader audioFileReader;
         private bool mouseDown;
         private Point lastLocation;
         public IAudioService AudioService { get; }
-
+        Dictionary<string, ButtonsInfo> ButoonColor = null;
 
         public Launchpad(IAudioService audioService)
         {
@@ -28,221 +26,69 @@ namespace WindowsFormsApp3
             this.TransparencyKey = Color.FromKnownColor(KnownColor.InactiveBorder);
             InitializeComponent();
             AudioService = audioService;
+            ButoonColor = new Dictionary<string, ButtonsInfo>()
+            {
+                {"D1",new ButtonsInfo((PictureBox)this.Controls["_1Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton,"01.wav")},
+                {"D2",new ButtonsInfo((PictureBox)this.Controls["_2Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton,"02.wav")},
+                {"D3",new ButtonsInfo((PictureBox)this.Controls["_3Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton,"03.wav")},
+                {"D4",new ButtonsInfo((PictureBox)this.Controls["_4Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton,"04.wav")},
+                {"D5",new ButtonsInfo((PictureBox)this.Controls["_5Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton,"04.wav")},
+                {"D6",new ButtonsInfo((PictureBox)this.Controls["_6Button"], Properties.Resources.YellowButton, Properties.Resources.WhiteButton, "03.wav")},
+                {"Q",new ButtonsInfo((PictureBox)this.Controls["qButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"W",new ButtonsInfo((PictureBox)this.Controls["wButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"E",new ButtonsInfo((PictureBox)this.Controls["eButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"R",new ButtonsInfo((PictureBox)this.Controls["rButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"T",new ButtonsInfo((PictureBox)this.Controls["tButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"Y",new ButtonsInfo((PictureBox)this.Controls["yButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"A",new ButtonsInfo((PictureBox)this.Controls["aButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"S",new ButtonsInfo((PictureBox)this.Controls["sButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"D",new ButtonsInfo((PictureBox)this.Controls["dButton"], Properties.Resources.left_up_yellow,Properties.Resources.left_up_white, "04.wav")},
+                {"F",new ButtonsInfo((PictureBox)this.Controls["fButton"], Properties.Resources.right_up_blue,Properties.Resources.right_up_white, "04.wav")},
+                {"G",new ButtonsInfo((PictureBox)this.Controls["gButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"H",new ButtonsInfo((PictureBox)this.Controls["hButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"Z",new ButtonsInfo((PictureBox)this.Controls["zButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"X",new ButtonsInfo((PictureBox)this.Controls["xButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"C",new ButtonsInfo((PictureBox)this.Controls["cButton"], Properties.Resources.left_down_green,Properties.Resources.left_down_white, "04.wav")},
+                {"V",new ButtonsInfo((PictureBox)this.Controls["vButton"], Properties.Resources.right_down_red,Properties.Resources.right_down_white, "04.wav")},
+                {"B",new ButtonsInfo((PictureBox)this.Controls["bButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"N",new ButtonsInfo((PictureBox)this.Controls["nButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"D7",new ButtonsInfo((PictureBox)this.Controls["_7Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"D8",new ButtonsInfo((PictureBox)this.Controls["_8Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"D9",new ButtonsInfo((PictureBox)this.Controls["_9Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"D0",new ButtonsInfo((PictureBox)this.Controls["_0Button"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"OemMinus",new ButtonsInfo((PictureBox)this.Controls["minusButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"Oemplus",new ButtonsInfo((PictureBox)this.Controls["equalsButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"U",new ButtonsInfo((PictureBox)this.Controls["uButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"I",new ButtonsInfo((PictureBox)this.Controls["iButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"O",new ButtonsInfo((PictureBox)this.Controls["oButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"P",new ButtonsInfo((PictureBox)this.Controls["pButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"OemOpenBrackets",new ButtonsInfo((PictureBox)this.Controls["leftBracketButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+                {"Oem6",new ButtonsInfo((PictureBox)this.Controls["rightBracketButton"], Properties.Resources.YellowButton,Properties.Resources.WhiteButton, "04.wav")},
+
+            };
         }
 
+        private void Launchpad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (ButoonColor.Keys.Contains(e.KeyCode.ToString()))
+            {
+                ButoonColor[e.KeyCode.ToString()].PictureBox.Image = ButoonColor[e.KeyCode.ToString()].NewImage;
+            }
+        }
+        private void Launchpad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ButoonColor.Keys.Contains(e.KeyCode.ToString()))
+            {
+                ButoonColor[e.KeyCode.ToString()].PictureBox.Image = ButoonColor[e.KeyCode.ToString()].OldImage;
+            }
+        }
 
+        #region FormButtons
         private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            #region Numbers 1 2 3 4 5 6
-            if (e.KeyChar == '1')
-            {
-                _1Button.Image = Properties.Resources.YellowButton;
-                PlaySound("01.wav");
-            }
-
-            if (e.KeyChar == '2')
-            {
-                _2Button.Image = Properties.Resources.YellowButton;
-                PlaySound("02.wav");
-            }
-
-            if (e.KeyChar == '3')
-            {
-                _3Button.Image = Properties.Resources.YellowButton;
-                PlaySound("03.wav");
-            }
-
-            if (e.KeyChar == '4')
-            {
-                _4Button.Image = Properties.Resources.BlueButton;
-                PlaySound("04.wav");
-            }
-
-            if (e.KeyChar == '5')
-            {
-                _5Button.Image = Properties.Resources.BlueButton;
-                PlaySound("05.wav");
-            }
-
-            if (e.KeyChar == '6')
-            {
-                _6Button.Image = Properties.Resources.BlueButton;
-                PlaySound("06.wav");
-            }
-            #endregion
-
-            #region q w e r t y
-            if (e.KeyChar == 'q' || e.KeyChar == 'Q')
-            {
-                qButton.Image = Properties.Resources.YellowButton;
-                PlaySound("q.wav");
-            }
-
-            if (e.KeyChar == 'w' || e.KeyChar == 'W')
-            {
-                wButton.Image = Properties.Resources.YellowButton;
-                PlaySound("w.wav");
-            }
-
-            if (e.KeyChar == 'e' || e.KeyChar == 'E')
-            {
-                eButton.Image = Properties.Resources.YellowButton;
-                PlaySound("e.wav");
-            }
-
-            if (e.KeyChar == 'r' || e.KeyChar == 'R')
-            {
-                rButton.Image = Properties.Resources.BlueButton;
-                PlaySound("r.wav");
-            }
-
-            if (e.KeyChar == 't' || e.KeyChar == 'T')
-            {
-                tButton.Image = Properties.Resources.BlueButton;
-                PlaySound("t.wav");
-            }
-
-            if (e.KeyChar == 'y' || e.KeyChar == 'Y')
-            {
-                yButton.Image = Properties.Resources.BlueButton;
-                PlaySound("y.wav");
-            } 
-            #endregion
-
-            if (e.KeyChar == 'f' || e.KeyChar == 'F')
-            {
-                fButton.Image = Properties.Resources.right_up_blue;
-                
-            }
-
-            if (e.KeyChar == 'd' || e.KeyChar == 'D')
-            {
-                dButton.Image = Properties.Resources.left_up_yellow;
-            }
-
-            if (e.KeyChar == 'c' || e.KeyChar == 'C')
-            {
-                cButton.Image = Properties.Resources.left_down_green;
-            }
-
-            if (e.KeyChar == 'v' || e.KeyChar == 'V')
-            {
-                vButton.Image = Properties.Resources.right_down_red;
-            }
-        }
-
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
-            #region Numbers 1 2 3 4 5 6
-            if (e.KeyCode == Keys.D1)
-            {
-                _1Button.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode == Keys.D2)
-            {
-                _2Button.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode == Keys.D3)
-            {
-                _3Button.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode == Keys.D4)
-            {
-                _4Button.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode == Keys.D5)
-            {
-                _5Button.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode == Keys.D6)
-            {
-                _6Button.Image = Properties.Resources.WhiteButton;
-            }
-            #endregion
-
-            if (e.KeyCode.ToString() == "q" || e.KeyCode.ToString() == "Q")
-            {
-                qButton.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode.ToString() == "w" || e.KeyCode.ToString() == "W")
-            {
-                wButton.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode.ToString() == "e" || e.KeyCode.ToString() == "E")
-            {
-                eButton.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode.ToString() == "r" || e.KeyCode.ToString() == "R")
-            {
-                rButton.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode.ToString() == "t" || e.KeyCode.ToString() == "T")
-            {
-                tButton.Image = Properties.Resources.WhiteButton;
-            }
-
-            if (e.KeyCode.ToString() == "y" || e.KeyCode.ToString() == "Y")
-            {
-                yButton.Image = Properties.Resources.WhiteButton;
-            }
-
-
-
-            if (e.KeyCode.ToString() == "f" || e.KeyCode.ToString() == "F")
-            {
-                fButton.Image = Properties.Resources.right_up_white;
-            }
-
-            if (e.KeyCode.ToString() == "d" || e.KeyCode.ToString() == "D")
-            {
-                dButton.Image = Properties.Resources.left_up_white;
-            }
-
-            if (e.KeyCode.ToString() == "c" || e.KeyCode.ToString() == "C")
-            {
-                cButton.Image = Properties.Resources.left_down_white;
-            }
-
-            if (e.KeyCode.ToString() == "v" || e.KeyCode.ToString() == "V")
-            {
-                vButton.Image = Properties.Resources.right_down_white;
-            }
-        }
-
-        private void PlaySound(string file)
-        {
-            AudioClientShareMode shareMode = AudioClientShareMode.Shared;
-            wasapiOut = new WasapiOut(shareMode, useEventSync: true, 50);
-            //wasapiOut.Volume = 1;
-            try
-            {
-                audioFileReader = new AudioFileReader(file);
-            }
-            catch (Exception)
-            {
-                
-            }
-            //audioFileReader.Volume = 1;
-            wasapiOut.Init(audioFileReader);
-            wasapiOut.Play();
-        }
-
-        private void pictureBox42_Click(object sender, EventArgs e)
+        private void menuButton_Click(object sender, EventArgs e)
         {
             this.Location = new Point(this.Location.X - 200, this.Location.Y);
             Loop loop = new Loop(new AudioService());
@@ -250,7 +96,7 @@ namespace WindowsFormsApp3
             loop.Location = new Point(this.Location.X + 810, this.Location.Y);
         }
 
-        private void pictureBox38_Click(object sender, EventArgs e)
+        private void minimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
@@ -275,6 +121,8 @@ namespace WindowsFormsApp3
         private void Loop_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
-        }
+        } 
+        #endregion
+
     }
 }

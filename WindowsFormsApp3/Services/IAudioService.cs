@@ -10,7 +10,7 @@ namespace WindowsFormsApp3
    public interface IAudioService
     {
         void PlaySound(string file);
-        void RecordSounds(Timer timer, string name);
+        void RecordSounds(Timer timer, string name, int number);
         void StopRecordSound(Timer timer);
         void SetTimeInterval(Timer timer, int interval);
     }

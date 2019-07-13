@@ -66,11 +66,11 @@
             this.vButton = new System.Windows.Forms.PictureBox();
             this.fButton = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.minimizeButton = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
-            this.pictureBox42 = new System.Windows.Forms.PictureBox();
+            this.menuButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this._5Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._4Button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._3Button)).BeginInit();
@@ -108,11 +108,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.SuspendLayout();
             // 
             // _5Button
@@ -498,16 +498,16 @@
             this.closeButton.TabStop = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // pictureBox38
+            // minimizeButton
             // 
-            this.pictureBox38.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox38.Image = global::WindowsFormsApp3.Properties.Resources.minimise;
-            this.pictureBox38.Location = new System.Drawing.Point(739, 20);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(13, 13);
-            this.pictureBox38.TabIndex = 44;
-            this.pictureBox38.TabStop = false;
-            this.pictureBox38.Click += new System.EventHandler(this.pictureBox38_Click);
+            this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.Image = global::WindowsFormsApp3.Properties.Resources.minimise;
+            this.minimizeButton.Location = new System.Drawing.Point(739, 20);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(13, 13);
+            this.minimizeButton.TabIndex = 44;
+            this.minimizeButton.TabStop = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // pictureBox39
             // 
@@ -539,16 +539,16 @@
             this.pictureBox41.TabIndex = 47;
             this.pictureBox41.TabStop = false;
             // 
-            // pictureBox42
+            // menuButton
             // 
-            this.pictureBox42.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox42.Image = global::WindowsFormsApp3.Properties.Resources.settings;
-            this.pictureBox42.Location = new System.Drawing.Point(660, 45);
-            this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(51, 51);
-            this.pictureBox42.TabIndex = 48;
-            this.pictureBox42.TabStop = false;
-            this.pictureBox42.Click += new System.EventHandler(this.pictureBox42_Click);
+            this.menuButton.BackColor = System.Drawing.Color.Transparent;
+            this.menuButton.Image = global::WindowsFormsApp3.Properties.Resources.settings;
+            this.menuButton.Location = new System.Drawing.Point(660, 45);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(51, 51);
+            this.menuButton.TabIndex = 48;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // Launchpad
             // 
@@ -558,11 +558,11 @@
             this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.BG_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 819);
-            this.Controls.Add(this.pictureBox42);
+            this.Controls.Add(this.menuButton);
             this.Controls.Add(this.pictureBox41);
             this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.pictureBox39);
-            this.Controls.Add(this.pictureBox38);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.rightBracketButton);
             this.Controls.Add(this.leftBracketButton);
@@ -606,8 +606,8 @@
             this.Name = "Launchpad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Launchpad_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Launchpad_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Loop_MouseUp);
@@ -648,11 +648,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -695,11 +695,11 @@
         private System.Windows.Forms.PictureBox vButton;
         private System.Windows.Forms.PictureBox fButton;
         private System.Windows.Forms.PictureBox closeButton;
-        private System.Windows.Forms.PictureBox pictureBox38;
+        private System.Windows.Forms.PictureBox minimizeButton;
         private System.Windows.Forms.PictureBox pictureBox39;
         private System.Windows.Forms.PictureBox pictureBox40;
         private System.Windows.Forms.PictureBox pictureBox41;
-        private System.Windows.Forms.PictureBox pictureBox42;
+        private System.Windows.Forms.PictureBox menuButton;
     }
 }
 
