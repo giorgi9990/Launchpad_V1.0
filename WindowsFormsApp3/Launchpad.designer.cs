@@ -125,6 +125,7 @@
             this._5Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this._5Button.TabIndex = 11;
             this._5Button.TabStop = false;
+            this._5Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _4Button
             // 
@@ -135,6 +136,7 @@
             this._4Button.Size = new System.Drawing.Size(92, 92);
             this._4Button.TabIndex = 10;
             this._4Button.TabStop = false;
+            this._4Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _3Button
             // 
@@ -145,6 +147,7 @@
             this._3Button.Size = new System.Drawing.Size(92, 92);
             this._3Button.TabIndex = 9;
             this._3Button.TabStop = false;
+            this._3Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _2Button
             // 
@@ -155,6 +158,7 @@
             this._2Button.Size = new System.Drawing.Size(92, 92);
             this._2Button.TabIndex = 8;
             this._2Button.TabStop = false;
+            this._2Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _1Button
             // 
@@ -165,6 +169,7 @@
             this._1Button.Size = new System.Drawing.Size(92, 92);
             this._1Button.TabIndex = 7;
             this._1Button.TabStop = false;
+            this._1Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _6Button
             // 
@@ -176,6 +181,7 @@
             this._6Button.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this._6Button.TabIndex = 12;
             this._6Button.TabStop = false;
+            this._6Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // yButton
             // 
@@ -187,6 +193,7 @@
             this.yButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.yButton.TabIndex = 18;
             this.yButton.TabStop = false;
+            this.yButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // tButton
             // 
@@ -198,6 +205,7 @@
             this.tButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.tButton.TabIndex = 17;
             this.tButton.TabStop = false;
+            this.tButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // rButton
             // 
@@ -208,6 +216,7 @@
             this.rButton.Size = new System.Drawing.Size(92, 92);
             this.rButton.TabIndex = 16;
             this.rButton.TabStop = false;
+            this.rButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // eButton
             // 
@@ -218,6 +227,7 @@
             this.eButton.Size = new System.Drawing.Size(92, 92);
             this.eButton.TabIndex = 15;
             this.eButton.TabStop = false;
+            this.eButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // wButton
             // 
@@ -228,6 +238,7 @@
             this.wButton.Size = new System.Drawing.Size(92, 92);
             this.wButton.TabIndex = 14;
             this.wButton.TabStop = false;
+            this.wButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // qButton
             // 
@@ -238,6 +249,7 @@
             this.qButton.Size = new System.Drawing.Size(92, 92);
             this.qButton.TabIndex = 13;
             this.qButton.TabStop = false;
+            this.qButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // nButton
             // 
@@ -249,6 +261,7 @@
             this.nButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.nButton.TabIndex = 30;
             this.nButton.TabStop = false;
+            this.nButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // bButton
             // 
@@ -260,6 +273,7 @@
             this.bButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.bButton.TabIndex = 29;
             this.bButton.TabStop = false;
+            this.bButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // xButton
             // 
@@ -270,6 +284,7 @@
             this.xButton.Size = new System.Drawing.Size(92, 92);
             this.xButton.TabIndex = 26;
             this.xButton.TabStop = false;
+            this.xButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // zButton
             // 
@@ -280,6 +295,7 @@
             this.zButton.Size = new System.Drawing.Size(92, 92);
             this.zButton.TabIndex = 25;
             this.zButton.TabStop = false;
+            this.zButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // hButton
             // 
@@ -291,6 +307,7 @@
             this.hButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.hButton.TabIndex = 24;
             this.hButton.TabStop = false;
+            this.hButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // gButton
             // 
@@ -302,6 +319,7 @@
             this.gButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.gButton.TabIndex = 23;
             this.gButton.TabStop = false;
+            this.gButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // sButton
             // 
@@ -312,6 +330,7 @@
             this.sButton.Size = new System.Drawing.Size(92, 92);
             this.sButton.TabIndex = 20;
             this.sButton.TabStop = false;
+            this.sButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // aButton
             // 
@@ -322,6 +341,7 @@
             this.aButton.Size = new System.Drawing.Size(92, 92);
             this.aButton.TabIndex = 19;
             this.aButton.TabStop = false;
+            this.aButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // rightBracketButton
             // 
@@ -333,6 +353,7 @@
             this.rightBracketButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.rightBracketButton.TabIndex = 42;
             this.rightBracketButton.TabStop = false;
+            this.rightBracketButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // leftBracketButton
             // 
@@ -344,6 +365,7 @@
             this.leftBracketButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.leftBracketButton.TabIndex = 41;
             this.leftBracketButton.TabStop = false;
+            this.leftBracketButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // pButton
             // 
@@ -354,6 +376,7 @@
             this.pButton.Size = new System.Drawing.Size(92, 92);
             this.pButton.TabIndex = 40;
             this.pButton.TabStop = false;
+            this.pButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // oButton
             // 
@@ -364,6 +387,7 @@
             this.oButton.Size = new System.Drawing.Size(92, 92);
             this.oButton.TabIndex = 39;
             this.oButton.TabStop = false;
+            this.oButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // iButton
             // 
@@ -374,6 +398,7 @@
             this.iButton.Size = new System.Drawing.Size(92, 92);
             this.iButton.TabIndex = 38;
             this.iButton.TabStop = false;
+            this.iButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // uButton
             // 
@@ -384,6 +409,7 @@
             this.uButton.Size = new System.Drawing.Size(92, 92);
             this.uButton.TabIndex = 37;
             this.uButton.TabStop = false;
+            this.uButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // equalsButton
             // 
@@ -395,6 +421,7 @@
             this.equalsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.equalsButton.TabIndex = 36;
             this.equalsButton.TabStop = false;
+            this.equalsButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // minusButton
             // 
@@ -406,6 +433,7 @@
             this.minusButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.minusButton.TabIndex = 35;
             this.minusButton.TabStop = false;
+            this.minusButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _0Button
             // 
@@ -416,6 +444,7 @@
             this._0Button.Size = new System.Drawing.Size(92, 92);
             this._0Button.TabIndex = 34;
             this._0Button.TabStop = false;
+            this._0Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _9Button
             // 
@@ -426,6 +455,7 @@
             this._9Button.Size = new System.Drawing.Size(92, 92);
             this._9Button.TabIndex = 33;
             this._9Button.TabStop = false;
+            this._9Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _8Button
             // 
@@ -436,6 +466,7 @@
             this._8Button.Size = new System.Drawing.Size(92, 92);
             this._8Button.TabIndex = 32;
             this._8Button.TabStop = false;
+            this._8Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // _7Button
             // 
@@ -446,6 +477,7 @@
             this._7Button.Size = new System.Drawing.Size(92, 92);
             this._7Button.TabIndex = 31;
             this._7Button.TabStop = false;
+            this._7Button.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // dButton
             // 
@@ -456,6 +488,7 @@
             this.dButton.Size = new System.Drawing.Size(92, 92);
             this.dButton.TabIndex = 21;
             this.dButton.TabStop = false;
+            this.dButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // cButton
             // 
@@ -466,6 +499,7 @@
             this.cButton.Size = new System.Drawing.Size(92, 92);
             this.cButton.TabIndex = 27;
             this.cButton.TabStop = false;
+            this.cButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // vButton
             // 
@@ -476,6 +510,7 @@
             this.vButton.Size = new System.Drawing.Size(92, 92);
             this.vButton.TabIndex = 28;
             this.vButton.TabStop = false;
+            this.vButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // fButton
             // 
@@ -486,6 +521,7 @@
             this.fButton.Size = new System.Drawing.Size(92, 92);
             this.fButton.TabIndex = 22;
             this.fButton.TabStop = false;
+            this.fButton.DoubleClick += new System.EventHandler(this.ChangeMusic_Event);
             // 
             // closeButton
             // 

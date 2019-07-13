@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NAudio.Wave;
 using NAudio.CoreAudioApi;
-
+using System.IO;
 
 namespace WindowsFormsApp3
 {
@@ -122,8 +122,17 @@ namespace WindowsFormsApp3
         private void Loop_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
-        } 
+        }
         #endregion
 
+        private void ChangeMusic_Event(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "wav files (*.wav)|*.wav";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                ButoonColor.Values.FirstOrDefault(x => x.PictureBox.Name == (sender as PictureBox).Name).AudioName= dialog.FileName;
+            }
+        }
     }
 }
