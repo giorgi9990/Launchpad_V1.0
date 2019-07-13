@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Data;
-using NAudio.Wave;
-
 namespace WindowsFormsApp3
 {
     public partial class Loop : Form

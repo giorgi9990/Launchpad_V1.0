@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
         private Timer RecordTimer;
         public void PlaySound(string file)
         {
+            
             AudioClientShareMode shareMode = AudioClientShareMode.Shared;
             wasapiOut = new WasapiOut(shareMode, 0);
             wasapiOut.Volume = 0.5f;
