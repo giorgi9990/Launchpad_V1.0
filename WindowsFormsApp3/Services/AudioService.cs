@@ -23,14 +23,14 @@ namespace WindowsFormsApp3
         public int firstrecordDuration { get; set; } = 8000;
         private Timer RecordTimer;
 
-        public void RecordSounds(Timer timer, string name, int number)
+        public void RecordSounds(Timer timer, string name, int number, PictureBox LoopPicutrebox)
         {
             RecordTimer = new Timer();
-            RecordTimer.Interval = firstrecordDuration;
+            RecordTimer.Interval = firstrecordDuration * number;
             SetTimeInterval(timer, number);
             RecordTimer.Tick += delegate (object sender2, EventArgs e2)
             {
-                RecordSoundDelegat(new object(), new EventArgs(), timer);
+                RecordSoundDelegat(new object(), new EventArgs(), timer, LoopPicutrebox, name);
             };
             waveSource = new WaveIn();
             waveSource.WaveFormat = new WaveFormat();
@@ -47,7 +47,7 @@ namespace WindowsFormsApp3
             timer.Interval = firstrecordDuration * interval;
         }
 
-        public void StopRecordSound(Timer timer)
+        public void StopRecordSound(Timer timer ,string name)
         {
             if (firstrecordDuration == 8000)
             {
@@ -58,7 +58,7 @@ namespace WindowsFormsApp3
             waveSource.StopRecording();
             waveFile.Close();
             RecordTimer.Stop();
-
+            PlaySound(name);
             timer.Start();
         }
         #region Private Function
@@ -83,10 +83,10 @@ namespace WindowsFormsApp3
                 waveFile.Flush();
             }
         }
-        private void RecordSoundDelegat(object sender, EventArgs e, Timer timer)
+        private void RecordSoundDelegat(object sender, EventArgs e, Timer timer, PictureBox pictureBox, string name)
         {
-            StopRecordSound(timer);
-
+            StopRecordSound(timer, name);
+            pictureBox.Image = Properties.Resources.BlueLooperButton;
             RecordTimer.Stop();
         } 
         #endregion

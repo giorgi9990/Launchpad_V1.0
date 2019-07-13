@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loop));
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.loopGif5LabelMinus = new System.Windows.Forms.Label();
@@ -293,7 +294,7 @@
             // loopGif6
             // 
             this.loopGif6.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif6.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif6.Image = ((System.Drawing.Image)(resources.GetObject("loopGif6.Image")));
             this.loopGif6.Location = new System.Drawing.Point(236, 565);
             this.loopGif6.Name = "loopGif6";
             this.loopGif6.Size = new System.Drawing.Size(156, 154);
@@ -304,7 +305,7 @@
             // loopGif3
             // 
             this.loopGif3.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif3.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif3.Image = ((System.Drawing.Image)(resources.GetObject("loopGif3.Image")));
             this.loopGif3.Location = new System.Drawing.Point(38, 347);
             this.loopGif3.Name = "loopGif3";
             this.loopGif3.Size = new System.Drawing.Size(156, 156);
@@ -315,7 +316,7 @@
             // loopGif1
             // 
             this.loopGif1.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif1.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif1.Image = global::WindowsFormsApp3.Properties.Resources.FrontBlackCircle;
             this.loopGif1.Location = new System.Drawing.Point(38, 126);
             this.loopGif1.Name = "loopGif1";
             this.loopGif1.Size = new System.Drawing.Size(156, 156);
@@ -326,7 +327,7 @@
             // loopGif5
             // 
             this.loopGif5.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif5.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif5.Image = ((System.Drawing.Image)(resources.GetObject("loopGif5.Image")));
             this.loopGif5.Location = new System.Drawing.Point(38, 565);
             this.loopGif5.Name = "loopGif5";
             this.loopGif5.Size = new System.Drawing.Size(156, 154);
@@ -337,7 +338,7 @@
             // loopGif4
             // 
             this.loopGif4.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif4.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif4.Image = ((System.Drawing.Image)(resources.GetObject("loopGif4.Image")));
             this.loopGif4.Location = new System.Drawing.Point(236, 347);
             this.loopGif4.Name = "loopGif4";
             this.loopGif4.Size = new System.Drawing.Size(156, 156);
@@ -348,7 +349,7 @@
             // loopGif2
             // 
             this.loopGif2.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif2.Image = global::WindowsFormsApp3.Properties.Resources.Circle;
+            this.loopGif2.Image = ((System.Drawing.Image)(resources.GetObject("loopGif2.Image")));
             this.loopGif2.Location = new System.Drawing.Point(236, 126);
             this.loopGif2.Name = "loopGif2";
             this.loopGif2.Size = new System.Drawing.Size(156, 156);

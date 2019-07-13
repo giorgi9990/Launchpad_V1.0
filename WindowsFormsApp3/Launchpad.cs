@@ -73,6 +73,7 @@ namespace WindowsFormsApp3
             if (ButoonColor.Keys.Contains(e.KeyCode.ToString()))
             {
                 ButoonColor[e.KeyCode.ToString()].PictureBox.Image = ButoonColor[e.KeyCode.ToString()].NewImage;
+                AudioService.PlaySound(ButoonColor[e.KeyCode.ToString()].AudioName);
             }
         }
         private void Launchpad_KeyUp(object sender, KeyEventArgs e)
