@@ -198,7 +198,7 @@
             // tButton
             // 
             this.tButton.BackColor = System.Drawing.Color.Transparent;
-            this.tButton.Image = ((System.Drawing.Image)(resources.GetObject("tButton.Image")));
+            this.tButton.Image = global::Launchpad.Properties.Resources.WhiteButton;
             this.tButton.Location = new System.Drawing.Point(525, 236);
             this.tButton.Name = "tButton";
             this.tButton.Size = new System.Drawing.Size(92, 92);

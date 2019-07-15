@@ -253,33 +253,6 @@
         YII=
 </value>
   </data>
-  <data name="tButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADj79JYAAAABGdBTUEAALGPC/xhBQAABOFJREFUeF7t
-        3ddOXFcUgOF9EyL7mWwpT2Aewkn8CsEPEgRIiN6FRBNdIDqiCBCiCBjRixl6rzvr33BGAyZKbIZ1M+uX
-        lj0cYEbn24c9w83gvPf/Nb/IfJL5W2ZMZlfmVibdwwALTLDBCKuXDBPz4sHHeSfzl8yOjPX/wgoz7F4y
-        /VfwDzJLMtbPhd1Hme9svzsg81nmRsZ6XRhi+cT3yQcyv8vcy1ipCcs/ZBLGydhsI3Zlpz5MsX0C/l4m
-        JmO9TdiGJ9IIPEvGetswDuAZMt84Yr1pGGcAnhk+tDTKBDz74balUDbgIw+3LYVGAY8/3LYUirtb6f7e
-        ftd56zAW6jt3eXnpb25u/N3d3eOnrFSHLcZYu/Pzc391dYV+WAUrtT1e2cEYa3d2duYvLi789fV1WAlD
-        T11YYootxli709PTBLhd5akturojcKwDOJe6gae+ZHCMA/jJyUn4wPbx1BeBR/s31gb+hhm4cgaunIEr
-        Z+DKGbhyBq6cgStn4MoZuHIGrpyBK2fgyhm4cgaunIErZ+DKGbhyBq6cgStn4MoZuHIGrpyBK2fgyhm4
-        cgaunIErZ+DKGbhyBq6cgStn4MoZuHIGrpyBK2fgyhm4cgaunIErZ+DKGbhyBq6cgStn4MoZuHIGrpyB
-        K2fgyhm4cgaunIErZ+DKGbhyBq7ci+DHx8fhLTrtTX9TX/Kb/GKMtTs6Ogry9v6zqQ3D5PedxRhrt7+/
-        H26wAratpK7k7QRbjLF2u7u7t9zgcmefsav89SVf3Zhii7FY37mtra34zs5OOBBtLbaXvy7sMIy2Emwx
-        xtqtrq6OrK+v++3t7fAJ3gHYtpafL3krwRJTbDEW61G3tLSULeNXVlZYgfAF7Dm2tfx4yVsJhlhiii3G
-        WLu5ubnMmZkZPz8/75eXl8MXHBwc2H7+gyVjY4chlphiizHWbnp6OmNiYmJ3cnIyHIzFYn5zc9PQf6CX
-        sDHEElNsMcaav+PjRkZGsoaHh/3o6KifmpryCwsLfmNjw+/t7T3Z0w3+aRF08p6NGXYYYokptmL8Vb7l
-        4a8NDg0Nve/p6YnJ+IGBAT82NuZnZ2fD3sOzKyvGnfEbE6vIMzAPEi1COk103hhggQk2GGGFGXbj4+PB
-        EtPe3t4Yxsngrqur60N7e/tNR0eH7+7u9nKMH4Ow/3An/IjI68jwRHB4eBheyPP6kpc96TScM+eOARaY
-        YIMRVphhhyGWmGKLcwJcLnfAXUtLy5+NjY33Mr61tdXLMT84OBiueNl/2PT94uJi2Jt4MuBBGHm5kxYT
-        nS/njgEWIGODEVaYYdfU1OSxFNMvEXYCXDZ119fX5+QLXX19/efa2tobGV9XVxe+UVYprFh/f39YPVmg
-        sDfxIOk4nDsGWGCCDUZYYYYdhlgmYyfAZZWc3Em4ymVVXE1NzceKiopYeXm5l/99dXV1uBO5A1bNNzc3
-        e1m5sJJMW1tbWkx0vpw7Blhggg1GWD2axcTwt+fYTPhnbW3NycsXJ8+mTvYdrnJXWVn5rri4OKuwsPBb
-        QUGBZ4qKirwc8yUlJb60tNSXlZWF4UHSYaLz5dwxwAKTyAcrOfYVu+fQ0YR/4vHwK34CvbOz0zU0NLiq
-        qiond5CRn5//KS8vLzs3N3c8JycnLnMv49N8MIhjgg1GYvXrc+Cn490/Mp1aX6PHHRkAAAAASUVORK5C
-        YII=
-</value>
-  </data>
   <data name="rButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADj79JYAAAABGdBTUEAALGPC/xhBQAABOFJREFUeF7t
