@@ -16,6 +16,11 @@ namespace Launchpad
         {
             InitializeComponent();
             AudioService = audioService;
+            loopGif2.Enabled = false;
+            loopGif3.Enabled = false;
+            loopGif4.Enabled = false;
+            loopGif5.Enabled = false;
+            loopGif6.Enabled = false;
         }
 
         enum MouseClickCounter
@@ -39,6 +44,7 @@ namespace Launchpad
                 AudioService.StopRecordSound(firstloopTimer, "../../Assets/RecordSound/Track1.wav");
                 LoopPicturebox.Image = Properties.Resources.BlueLooperButton;
                 mouseClickCounter = MouseClickCounter.thridclick;
+                EnableButton();
             }
             else if (mouseClickCounter == MouseClickCounter.thridclick)
             {
