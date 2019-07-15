@@ -213,6 +213,16 @@ namespace WindowsFormsApp3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RedLooperButton {
+            get {
+                object obj = ResourceManager.GetObject("RedLooperButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap right_down_red {
             get {
                 object obj = ResourceManager.GetObject("right-down-red", resourceCulture);

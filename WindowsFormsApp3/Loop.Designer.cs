@@ -349,7 +349,7 @@
             // loopGif2
             // 
             this.loopGif2.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif2.Image = ((System.Drawing.Image)(resources.GetObject("loopGif2.Image")));
+            this.loopGif2.Image = global::WindowsFormsApp3.Properties.Resources.FrontBlackCircle;
             this.loopGif2.Location = new System.Drawing.Point(236, 126);
             this.loopGif2.Name = "loopGif2";
             this.loopGif2.Size = new System.Drawing.Size(156, 156);

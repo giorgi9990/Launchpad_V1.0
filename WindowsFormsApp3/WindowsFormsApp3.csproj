@@ -180,5 +180,8 @@
   <ItemGroup>
     <None Include="Assets\YellowLooperButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\RedLooperButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

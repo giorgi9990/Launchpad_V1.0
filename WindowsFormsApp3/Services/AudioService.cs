@@ -61,6 +61,7 @@ namespace WindowsFormsApp3
             PlaySound(name);
             timer.Start();
         }
+       
         #region Private Function
         private void waveSource_RecordingStopped(object sender, StoppedEventArgs e)
         {
