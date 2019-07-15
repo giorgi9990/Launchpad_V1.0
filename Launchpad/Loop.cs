@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace Launchpad
 {
     public partial class Loop : Form
     {
@@ -31,12 +31,12 @@ namespace WindowsFormsApp3
             if (mouseClickCounter == MouseClickCounter.firstclick)
             {
                 LoopPicturebox.Image = Properties.Resources.YellowLooperButton;
-                AudioService.RecordSounds(firstloopTimer, "RecordSound/Track1.wav", 1, loopGif1);
+                AudioService.RecordSounds(firstloopTimer, "../../Assets/RecordSound/Track1.wav", 1, loopGif1);
                 mouseClickCounter = MouseClickCounter.secondclick;
             }
             else if (mouseClickCounter == MouseClickCounter.secondclick)
             {
-                AudioService.StopRecordSound(firstloopTimer, "RecordSound/Track1.wav");
+                AudioService.StopRecordSound(firstloopTimer, "../../Assets/RecordSound/Track1.wav");
                 LoopPicturebox.Image = Properties.Resources.BlueLooperButton;
                 mouseClickCounter = MouseClickCounter.thridclick;
             }
@@ -55,63 +55,64 @@ namespace WindowsFormsApp3
             switch (LoopPicturebox.Name)
             {
                 case "loopGif2":
-                    SwichFunction(secondLoopsecondClick, LoopPicturebox,secondloopTimer, "RecordSound/Track2.wav", int.Parse(loopGif2Label.Text));
+                    SwichFunction(secondLoopsecondClick, LoopPicturebox,secondloopTimer, "../../Assets/RecordSound/Track2.wav", int.Parse(loopGif2Label.Text));
+                    secondLoopsecondClick = true;
                     break;
                 case "loopGif3":
-                    SwichFunction(thirdLoopsecondClick, LoopPicturebox, thirdloopTimer, "RecordSound/Track3.wav", int.Parse(loopGif3Label.Text));
+                    SwichFunction(thirdLoopsecondClick, LoopPicturebox, thirdloopTimer, "../../Assets/RecordSound/Track3.wav", int.Parse(loopGif3Label.Text));
+                    thirdLoopsecondClick = true;
                     break;
                 case "loopGif4":
-                    SwichFunction(fourthloopsecondClick, LoopPicturebox, fourthloopTimer, "RecordSound/Track4.wav", int.Parse(loopGif4Label.Text));
+                    SwichFunction(fourthloopsecondClick, LoopPicturebox, fourthloopTimer, "../../Assets/RecordSound/Track4.wav", int.Parse(loopGif4Label.Text));
+                    fourthloopsecondClick = true;
                     break;
                 case "loopGif5":
-                    SwichFunction(fifthloopsecondClick, LoopPicturebox, fifthloopTimer, "RecordSound/Track5.wav", int.Parse(loopGif5Label.Text));
+                    SwichFunction(fifthloopsecondClick, LoopPicturebox, fifthloopTimer, "../../Assets/RecordSound/Track5.wav", int.Parse(loopGif5Label.Text));
+                    fifthloopsecondClick = true;
                     break;
                 case "loopGif6":
-                    SwichFunction(sixthloopsecondClick, LoopPicturebox, sixthloopTimer, "RecordSound/Track6.wav", int.Parse(loopGif6Label.Text));
+                    SwichFunction(sixthloopsecondClick, LoopPicturebox, sixthloopTimer, "../../Assets/RecordSound/Track6.wav", int.Parse(loopGif6Label.Text));
+                    sixthloopsecondClick = true;
                     break;
                 default:
                     break;
             }
-            DisableButton();
         }
 
         #region Timer_Tick
         private void FirstloopTimer_Tick(object sender, EventArgs e)
         {
-          AudioService.PlaySound("RecordSound/Track1.wav");
+          AudioService.PlaySound("../../Assets/RecordSound/Track1.wav");
         }
       
         private void SecondloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track2.wav");
+            AudioService.PlaySound("../../Assets/RecordSound/Track2.wav");
             EnableButton();
         }
 
         private void ThirdloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track3.wav");
+            AudioService.PlaySound("../../Assets/RecordSound/Track3.wav");
             EnableButton();
         }
 
         private void FourthloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track4.wav");
+            AudioService.PlaySound("../../Assets/RecordSound/Track4.wav");
             EnableButton();
-
         }
 
         private void FifthloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track5.wav");
+            AudioService.PlaySound("../../Assets/RecordSound/Track5.wav");
             EnableButton();
-
         }
 
         private void SixthloopTimer_Tick(object sender, EventArgs e)
         {
-            AudioService.PlaySound("RecordSound/Track6.wav");
+            AudioService.PlaySound("../../Assets/RecordSound/Track6.wav");
             EnableButton();
-
         }
         #endregion
 
@@ -148,7 +149,7 @@ namespace WindowsFormsApp3
         }
         private void EnableButton()
         {
-            loopGif1.Visible = loopGif1.Image == Properties.Resources.RedLooperButton ? false : true;
+            loopGif1.Enabled = loopGif1.Image == Properties.Resources.RedLooperButton ? false : true;
             loopGif2.Enabled = loopGif2.Image == Properties.Resources.RedLooperButton ? false : true;
             loopGif3.Enabled = loopGif3.Image == Properties.Resources.RedLooperButton ? false : true;
             loopGif4.Enabled = loopGif4.Image == Properties.Resources.RedLooperButton ? false : true;
@@ -158,16 +159,17 @@ namespace WindowsFormsApp3
 
         public void SwichFunction(bool Secondclick, PictureBox LoopPicturebox, Timer timer, string name, int interval)
         {
-            if (!secondLoopsecondClick)
+            if (!Secondclick)
             {
                 AudioService.RecordSounds(timer, name, interval, LoopPicturebox);
+                DisableButton();
                 LoopPicturebox.Image = Properties.Resources.YellowLooperButton;
-                secondLoopsecondClick = true;
             }
             else
             {
                 LoopPicturebox.Image = Properties.Resources.RedLooperButton;
                 timer.Stop();
+                LoopPicturebox.Enabled = false;
             }
         } 
         #endregion

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace Launchpad
 {
     partial class Loop
     {
@@ -72,7 +72,7 @@
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.Image = global::WindowsFormsApp3.Properties.Resources.close;
+            this.closeButton.Image = global::Launchpad.Properties.Resources.close;
             this.closeButton.Location = new System.Drawing.Point(389, 20);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(13, 13);
@@ -83,7 +83,7 @@
             // pictureBox38
             // 
             this.pictureBox38.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox38.Image = global::WindowsFormsApp3.Properties.Resources.minimise;
+            this.pictureBox38.Image = global::Launchpad.Properties.Resources.minimise;
             this.pictureBox38.Location = new System.Drawing.Point(370, 20);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(13, 13);
@@ -316,7 +316,7 @@
             // loopGif1
             // 
             this.loopGif1.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif1.Image = global::WindowsFormsApp3.Properties.Resources.FrontBlackCircle;
+            this.loopGif1.Image = global::Launchpad.Properties.Resources.FrontBlackCircle;
             this.loopGif1.Location = new System.Drawing.Point(38, 126);
             this.loopGif1.Name = "loopGif1";
             this.loopGif1.Size = new System.Drawing.Size(156, 156);
@@ -349,7 +349,7 @@
             // loopGif2
             // 
             this.loopGif2.BackColor = System.Drawing.Color.Transparent;
-            this.loopGif2.Image = global::WindowsFormsApp3.Properties.Resources.FrontBlackCircle;
+            this.loopGif2.Image = global::Launchpad.Properties.Resources.FrontBlackCircle;
             this.loopGif2.Location = new System.Drawing.Point(236, 126);
             this.loopGif2.Name = "loopGif2";
             this.loopGif2.Size = new System.Drawing.Size(156, 156);
@@ -394,7 +394,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.LoopBackground;
+            this.BackgroundImage = global::Launchpad.Properties.Resources.LoopBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(429, 819);
             this.Controls.Add(this.loopGif5LabelMinus);

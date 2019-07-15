@@ -11,7 +11,7 @@ using NAudio.Wave;
 using NAudio.CoreAudioApi;
 using System.IO;
 
-namespace WindowsFormsApp3
+namespace Launchpad
 {
     public partial class Launchpad : Form
     {

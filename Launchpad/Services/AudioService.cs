@@ -3,7 +3,7 @@ using NAudio.Wave;
 using System;
 using System.Windows.Forms;
 using System.Media;
-namespace WindowsFormsApp3
+namespace Launchpad
 {
     public class AudioService : IAudioService
     {

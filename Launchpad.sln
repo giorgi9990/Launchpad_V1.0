@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29006.145
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp3", "WindowsFormsApp3\WindowsFormsApp3.csproj", "{BF328292-64B1-49CC-9D7F-A955F47B31EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launchpad", "Launchpad\Launchpad.csproj", "{BF328292-64B1-49CC-9D7F-A955F47B31EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

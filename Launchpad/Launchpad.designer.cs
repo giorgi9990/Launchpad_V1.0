@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace Launchpad
 {
     partial class Launchpad
     {
@@ -130,7 +130,7 @@
             // _4Button
             // 
             this._4Button.BackColor = System.Drawing.Color.Transparent;
-            this._4Button.Image = global::WindowsFormsApp3.Properties.Resources.WhiteButton;
+            this._4Button.Image = global::Launchpad.Properties.Resources.WhiteButton;
             this._4Button.Location = new System.Drawing.Point(411, 122);
             this._4Button.Name = "_4Button";
             this._4Button.Size = new System.Drawing.Size(92, 92);
@@ -163,7 +163,7 @@
             // _1Button
             // 
             this._1Button.BackColor = System.Drawing.Color.Transparent;
-            this._1Button.Image = global::WindowsFormsApp3.Properties.Resources.WhiteButton;
+            this._1Button.Image = global::Launchpad.Properties.Resources.WhiteButton;
             this._1Button.Location = new System.Drawing.Point(68, 122);
             this._1Button.Name = "_1Button";
             this._1Button.Size = new System.Drawing.Size(92, 92);
@@ -482,7 +482,7 @@
             // dButton
             // 
             this.dButton.BackColor = System.Drawing.Color.Transparent;
-            this.dButton.Image = global::WindowsFormsApp3.Properties.Resources.left_up_white;
+            this.dButton.Image = global::Launchpad.Properties.Resources.left_up_white;
             this.dButton.Location = new System.Drawing.Point(297, 351);
             this.dButton.Name = "dButton";
             this.dButton.Size = new System.Drawing.Size(92, 92);
@@ -493,7 +493,7 @@
             // cButton
             // 
             this.cButton.BackColor = System.Drawing.Color.Transparent;
-            this.cButton.Image = global::WindowsFormsApp3.Properties.Resources.left_down_white;
+            this.cButton.Image = global::Launchpad.Properties.Resources.left_down_white;
             this.cButton.Location = new System.Drawing.Point(297, 465);
             this.cButton.Name = "cButton";
             this.cButton.Size = new System.Drawing.Size(92, 92);
@@ -504,7 +504,7 @@
             // vButton
             // 
             this.vButton.BackColor = System.Drawing.Color.Transparent;
-            this.vButton.Image = global::WindowsFormsApp3.Properties.Resources.right_down_white;
+            this.vButton.Image = global::Launchpad.Properties.Resources.right_down_white;
             this.vButton.Location = new System.Drawing.Point(411, 465);
             this.vButton.Name = "vButton";
             this.vButton.Size = new System.Drawing.Size(92, 92);
@@ -515,7 +515,7 @@
             // fButton
             // 
             this.fButton.BackColor = System.Drawing.Color.Transparent;
-            this.fButton.Image = global::WindowsFormsApp3.Properties.Resources.right_up_white;
+            this.fButton.Image = global::Launchpad.Properties.Resources.right_up_white;
             this.fButton.Location = new System.Drawing.Point(411, 351);
             this.fButton.Name = "fButton";
             this.fButton.Size = new System.Drawing.Size(92, 92);
@@ -526,7 +526,7 @@
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
-            this.closeButton.Image = global::WindowsFormsApp3.Properties.Resources.close;
+            this.closeButton.Image = global::Launchpad.Properties.Resources.close;
             this.closeButton.Location = new System.Drawing.Point(763, 20);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(13, 13);
@@ -537,7 +537,7 @@
             // minimizeButton
             // 
             this.minimizeButton.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeButton.Image = global::WindowsFormsApp3.Properties.Resources.minimise;
+            this.minimizeButton.Image = global::Launchpad.Properties.Resources.minimise;
             this.minimizeButton.Location = new System.Drawing.Point(739, 20);
             this.minimizeButton.Name = "minimizeButton";
             this.minimizeButton.Size = new System.Drawing.Size(13, 13);
@@ -548,7 +548,7 @@
             // pictureBox39
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox39.Image = global::WindowsFormsApp3.Properties.Resources.mic;
+            this.pictureBox39.Image = global::Launchpad.Properties.Resources.mic;
             this.pictureBox39.Location = new System.Drawing.Point(89, 45);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(51, 51);
@@ -558,7 +558,7 @@
             // pictureBox40
             // 
             this.pictureBox40.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox40.Image = global::WindowsFormsApp3.Properties.Resources.volume_down;
+            this.pictureBox40.Image = global::Launchpad.Properties.Resources.volume_down;
             this.pictureBox40.Location = new System.Drawing.Point(260, 45);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(51, 51);
@@ -568,7 +568,7 @@
             // pictureBox41
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox41.Image = global::WindowsFormsApp3.Properties.Resources.volume_up;
+            this.pictureBox41.Image = global::Launchpad.Properties.Resources.volume_up;
             this.pictureBox41.Location = new System.Drawing.Point(487, 45);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(51, 51);
@@ -578,7 +578,7 @@
             // menuButton
             // 
             this.menuButton.BackColor = System.Drawing.Color.Transparent;
-            this.menuButton.Image = global::WindowsFormsApp3.Properties.Resources.settings;
+            this.menuButton.Image = global::Launchpad.Properties.Resources.settings;
             this.menuButton.Location = new System.Drawing.Point(660, 45);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(51, 51);
@@ -591,7 +591,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.BG_1;
+            this.BackgroundImage = global::Launchpad.Properties.Resources.BG_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 819);
             this.Controls.Add(this.menuButton);
